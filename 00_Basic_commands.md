@@ -7,6 +7,7 @@ All'interno della Shell Ubuntu possiamo utilizzare alcuni comandi utili per gest
 - `apt` questo comando ci permette di gestire i pacchetti, per esempio per lanciare un comando di aggiornaemnto scriveremo `apt update`. Nelle vecchie versioni di Ubuntu il comando era `apt-get`
 - `apt udate` serve per vedere se ci sono aggiornamenti su pacchetti della macchina
 - `apt upgrade` serve per lanciare l'aggiornamento. Se non si è super utenti bisogna aggiungere il comando sudo, es. `sudo apt upgrade`
+- `apt install` serve per lanciare una installazione, es `apt install docker-compose`
 
 ### Muoversi all'interno del server
 
