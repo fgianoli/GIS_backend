@@ -21,7 +21,7 @@ sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
 
 Successivamente
 
-```
+```sh
 sudo add-apt-repository universe
 sudo apt-get update -y
 sudo apt-get install -y git-core git-buildpackage debhelper devscripts python3.10-dev python3.10-venv virtualenvwrapper
@@ -34,7 +34,12 @@ sudo apt-get install -y apt-transport-https ca-certificates curl lsb-release gnu
 ```sh
 cd /opt
 
+## Controllare la release di GeoNode
 sudo git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
 
+source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
+mkvirtualenv --python=/usr/bin/python3 my_geonode
+
+pip install Django==3.2.13
 
 ```
