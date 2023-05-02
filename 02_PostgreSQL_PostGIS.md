@@ -1,12 +1,11 @@
 # INSTALLARE POSTGRESQL E POSTGIS
 
-https://techviewleo.com/how-to-install-postgresql-database-on-ubuntu/
+[https://techviewleo.com/how-to-install-postgresql-database-on-ubuntu/
+](https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-22-04-quickstart)
 
 ``` sh
-sudo sh -c 'echo "deb http://apt.postgresql.org/pub/repos/apt $(lsb_release -cs)-pgdg main" > /etc/apt/sources.list.d/pgdg.list'
-wget --quiet -O - https://www.postgresql.org/media/keys/ACCC4CF8.asc | sudo apt-key add -
-sudo apt -y update
-sudo apt -y install postgresql-14
+sudo apt update
+sudo apt install postgresql postgresql-contrib
 
 sudo -u postgres psql -c "SELECT version();"
 
