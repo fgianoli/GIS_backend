@@ -21,3 +21,5 @@ https://www.vultr.com/docs/how-to-install-the-postgis-extension-for-postgresql/
 sudo apt install postgis postgresql-14-postgis-3
 
 ```
+
+Ricordarsi di installare l'estensione PostGIS sul DB che si vuole utilizzare
