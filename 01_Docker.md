@@ -1,13 +1,9 @@
 # INSTALLARE DOCKER
 https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-22-04 
 
-A container image is a lightweight, stand-alone, executable package of a piece of software that includes everything needed to run it: code, runtime, system tools, system libraries, settings.
+Docker è una piattaforma di virtualizzazione dei contenitori che consente agli sviluppatori di creare, distribuire e gestire applicazioni in modo rapido e affidabile. I contenitori Docker consentono di isolare un'applicazione e le sue dipendenze in un ambiente virtualizzato che può essere eseguito su qualsiasi sistema operativo in cui è installato Docker.
 
-Docker containers running on a single machine share that machine’s operating system kernel; they start instantly and use less compute and RAM.
-
-Containers can share a single kernel, and the only information that needs to be in a container image is the executable and its package dependencies, which never need to be installed on the host system.
-
-Multiple containers can run on the same machine and share the OS kernel with other containers, each running as isolated processes in user space.
+In pratica, Docker consente agli sviluppatori di creare un pacchetto di un'applicazione e di tutte le sue dipendenze in un contenitore, che può quindi essere eseguito su qualsiasi sistema operativo senza dover preoccuparsi di installare tutte le dipendenze manualmente. Ciò rende il processo di sviluppo e distribuzione di un'applicazione più rapido e semplificato, in quanto gli sviluppatori possono concentrarsi sulla creazione dell'applicazione senza dover preoccuparsi di tutti i dettagli di configurazione del sistema.
 
 
 ```
