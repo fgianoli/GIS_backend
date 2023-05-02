@@ -1,6 +1,6 @@
 # INSTALLARE GEONODE VIA DOCKER
 
-https://docs.geonode.org/en/master/install/basic/index.html#ubuntu-20-04-basic-setup  
+[GUIDA DOCUMENTAZIONE UFFICIALE](https://docs.geonode.org/en/master/install/basic/index.html)  
 
 ## Preparare la macchina 
 
