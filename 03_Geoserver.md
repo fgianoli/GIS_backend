@@ -7,7 +7,7 @@ Installiamo Geoserver sotto la cartella `/opt`
 
 ```
 cd /opt
-git clone https://github.com/kartoza/docker-geoserver.git
+sudo git clone https://github.com/kartoza/docker-geoserver.git
 cd docker-geoserver
 mkdir geoserver_data
 ```
