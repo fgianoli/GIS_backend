@@ -17,3 +17,12 @@ In questo corso tratteremo dell'installazione e della configurazione di un serve
 - Ubuntu download https://www.ubuntu-it.org/download
 - VirtualBox https://www.virtualbox.org/
 - Putty https://www.putty.org/
+
+## Inoltro porte dalla  VM
+
+```
+http TCP 127.0.0.1 8000 10.0.2.15 80
+ssh  TCP 127.0.0.1 2222 10.0.2.15 22
+postgres TCP 127.0.0.1 5434 10.0.2.15 5432
+geoserver 127.0.0.1 5000 10.0.2.15 8080
+```
