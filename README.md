@@ -16,3 +16,4 @@ In questo corso tratteremo dell'installazione e della configurazione di un serve
 ## Risorse
 - Ubuntu download https://www.ubuntu-it.org/download
 - VirtualBox https://www.virtualbox.org/
+- Putty https://www.putty.org/
