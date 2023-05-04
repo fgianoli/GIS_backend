@@ -17,6 +17,7 @@ In questo corso tratteremo dell'installazione e della configurazione di un serve
 - Ubuntu download https://www.ubuntu-it.org/download
 - VirtualBox https://www.virtualbox.org/
 - Putty https://www.putty.org/
+- https://winscp.net/eng/download.php
 
 ## Inoltro porte dalla  VM
 
