@@ -20,7 +20,13 @@ https://www.vultr.com/docs/how-to-install-the-postgis-extension-for-postgresql/
 sudo apt install postgis postgresql-14-postgis-3
 
 ```
+## Creare un DB
 
+```
+psql postgres -c "CREATE DATABASE federico_pg WITH ENCODING 'UTF8' TEMPLATE template0"
+psql federico_pg
+
+```
 Ricordarsi di installare l'estensione PostGIS sul DB che si vuole utilizzare
 https://www.postgresqltutorial.com/postgresql-administration/psql-commands/
 
