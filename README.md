@@ -12,3 +12,7 @@ In questo corso tratteremo dell'installazione e della configurazione di un serve
 - Installare G3W con Docker
 - Geoserver e REST API
 - Vector Tiles
+
+## Risorse
+- Ubuntu download https://www.ubuntu-it.org/download
+- VirtualBox https://www.virtualbox.org/
