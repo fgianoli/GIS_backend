@@ -10,7 +10,7 @@ docker-compose sulla base di
 
 ___
 
-#   VIDEO 1 - Geoserver REST API 
+#  Geoserver REST API 
 
 [DOC] https://docs.geoserver.org/latest/en/user/rest/index.html#rest
 
