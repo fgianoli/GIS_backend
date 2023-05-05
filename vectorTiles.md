@@ -1,8 +1,5 @@
 
-
-___
-
-#   VIDEO 2 - Vector Tiles
+#  Vector Tiles
 
 [DOC] https://www.maptiler.com/news/2019/02/what-are-vector-tiles-and-why-you-should-care/
 
