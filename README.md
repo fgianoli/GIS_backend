@@ -5,7 +5,7 @@ In questo corso tratteremo dell'installazione e della configurazione di un serve
 - Installare Ubuntu su VM Virtualbox
 - Configurare Ubuntu, i [Comandi Shell](https://github.com/fgianoli/GIS_backend/blob/main/00_Basic_commands.md)
 - Installare [Docker e Docker Compose](https://github.com/fgianoli/GIS_backend/blob/main/01_Docker.md)
-- Installare PostgreSQL e PostGIS
+- Installare [PostgreSQL e PostGIS](https://github.com/fgianoli/GIS_backend/blob/main/02_PostgreSQL_PostGIS.md)
 - Installare Geoserver
 - Installare Geonode
 - Installare Lizmap
