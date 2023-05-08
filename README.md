@@ -6,7 +6,7 @@ In questo corso tratteremo dell'installazione e della configurazione di un serve
 - Configurare Ubuntu, i [Comandi Shell](https://github.com/fgianoli/GIS_backend/blob/main/00_Basic_commands.md)
 - Installare [Docker e Docker Compose](https://github.com/fgianoli/GIS_backend/blob/main/01_Docker.md)
 - Installare [PostgreSQL e PostGIS](https://github.com/fgianoli/GIS_backend/blob/main/02_PostgreSQL_PostGIS.md)
-- Installare Geoserver
+- Installare [Geoserver](https://github.com/fgianoli/GIS_backend/blob/main/03_Geoserver.md)
 - Installare Geonode
 - Installare Lizmap
 - Installare G3W con Docker
