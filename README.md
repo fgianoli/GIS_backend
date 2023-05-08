@@ -14,10 +14,10 @@ In questo corso tratteremo dell'installazione e della configurazione di un serve
 - Vector Tiles
 
 ## Risorse
-- Ubuntu download https://www.ubuntu-it.org/download
-- VirtualBox https://www.virtualbox.org/
-- Putty https://www.putty.org/
-- https://winscp.net/eng/download.php
+- [Ubuntu download](https://www.ubuntu-it.org/download)
+- [VirtualBox](https://www.virtualbox.org)
+- [Putty](https://www.putty.org)
+- [WinSCP](https://winscp.net/eng/download.php)
 
 ## Inoltro porte dalla  VM
 
