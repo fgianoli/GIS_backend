@@ -9,8 +9,8 @@ Per prima cosa installare sulla macchina le librerie
 ```sh
 sudo add-apt-repository universe
 sudo apt-get update -y
-sudo apt-get install -y git git-buildpackage debhelper devscripts python3.10-dev python3.10-venv virtualenvwrapper
-sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common vim
+sudo apt install -y git git-buildpackage debhelper devscripts python3.10-dev python3.10-venv virtualenvwrapper
+sudo apt install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common vim
 sudo apt install apt-transport-https ca-certificates curl software-properties-common
 ```
 
@@ -45,10 +45,6 @@ python create-envfile.py
 ./docker-build.sh
 docker ps -a
 ```
-
-_____
-### Esempio del file  `docker-build.sh`
-
 
 ### Esempio file .env
 ```
