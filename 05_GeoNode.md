@@ -7,25 +7,24 @@
 Per prima cosa installare sulla macchina le librerie
 
 ```sh
-sudo add-apt-repository ppa:ubuntugis/ppa
-sudo apt update -y
-
-sudo apt install -y python3-gdal=3.3.2+dfsg-2~focal2 gdal-bin=3.3.2+dfsg-2~focal2 libgdal-dev=3.3.2+dfsg-2~focal2 ####### QUESTO NO
-sudo apt install -y python3-pip python3-dev python3-virtualenv python3-venv virtualenvwrapper
-sudo apt install -y libxml2 libxml2-dev gettext
-sudo apt install -y libxslt1-dev libjpeg-dev libpng-dev libpq-dev
-sudo apt install -y software-properties-common build-essential
-sudo apt install -y git unzip gcc zlib1g-dev libgeos-dev libproj-dev
-sudo apt install -y sqlite3 spatialite-bin libsqlite3-mod-spatialite
-```
-
-Successivamente
-
-```sh
 sudo add-apt-repository universe
 sudo apt-get update -y
-sudo apt-get install -y git-core git-buildpackage debhelper devscripts python3.10-dev python3.10-venv virtualenvwrapper
-sudo apt-get install -y apt-transport-https ca-certificates curl lsb-release gnupg gnupg-agent software-properties-common vim
+sudo apt-get install -y git git-buildpackage debhelper devscripts python3.10-dev python3.10-venv virtualenvwrapper
+sudo apt-get install -y apt-transport-https ca-certificates curl gnupg-agent software-properties-common vim
+sudo apt install apt-transport-https ca-certificates curl software-properties-common
+```
+
+Se non è installato docker installarlo
+
+```sh
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt update
+apt-cache policy docker-ce
+ sudo apt install -y docker-ce
+curl -SL https://github.com/docker/compose/releases/download/v2.3.3/docker-compose-linux-x86_64 -o ~/.docker/cli-plugins/docker-compose
+chmod +x ~/.docker/cli-plugins/docker-compose
+docker compose version
 
 ```
 
@@ -33,16 +32,22 @@ sudo apt-get install -y apt-transport-https ca-certificates curl lsb-release gnu
 
 ```sh
 cd /opt
-
 ## Controllare la release di GeoNode
-sudo git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
-
+git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 mkvirtualenv --python=/usr/bin/python3 my_geonode
-
 pip install Django==3.2.13
+django-admin startproject --template=./geonode-project -e py,sh,md,rst,json,yml,ini,env,sample,properties -n monitoring-cron -n Dockerfile my_geonode
 
+cd my_geonode/
+nano docker-build.sh #cambiare il comando da docker-compose a doker compose
+python create-envfile.py
+./docker-build.sh
+docker ps -a
 ```
+
+_____
+### Esempio del file  `docker-build.sh`
 
 
 ### Esempio file .env
