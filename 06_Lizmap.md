@@ -1,6 +1,7 @@
 # INSTALLARE LIZMAP
 
 https://docs.lizmap.com/3.6/it/install/linux.html
+PHP
 
 ## Installare PHP
 ```
