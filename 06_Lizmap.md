@@ -2,6 +2,20 @@
 
 https://docs.lizmap.com/3.6/it/install/linux.html
 
+## Installare PHP
+```
+sudo add-apt-repository -y ppa:ondrej/php && sudo apt update && apt install -y php7.4-mbstring php7.4-zip php7.4-xml
+
+apt install php libapache2-mod-php
+apt install php7.4-fpm php7.4-cli php7.4-bz2 php7.4-curl php7.4-gd php7.4-intl php7.4-json php7.4-mbstring php7.4-pgsql php7.4-sqlite3 php7.4-xml php7.4-ldap php7.4-redis
+apt install xvfb
+apt-get install php-sqlite3
+sudo apt-get install libsqlite3-0 libsqlite3-dev
+apt-get install php7.4-sqlite3
+apt-get install php-xml
+
+```
+
 Controllare la versione del release di Lizmap da https://github.com/3liz/lizmap-web-client/releases/ 
 ```sh
 cd /var/www
