@@ -27,7 +27,7 @@ Suites, nelle righe precedenti, dipende dalla tua distribuzione. il comando `lsb
 sudo apt update
 sudo apt-cache policy qgis-server
 
-sudo apt install qgis-server python-qgis libapache2-mod-fcgid
+sudo apt install -y qgis-server python-qgis libapache2-mod-fcgid
 ```
 Abilitare QGIS Server
 
