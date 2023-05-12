@@ -8,6 +8,65 @@ docker-compose sulla base di
 
 [SOURCE/DOC] https://github.com/kartoza/docker-geoserver
 
+In questo tutorial oltre al container di geoserver useremo anche quello di postgis su base dell'immagine di kartoza.
+
+Editiamo quindi il precedente docker-compose.yaml file aggiungendo servizio e dipendenze come segue:
+
+```
+version: '3.9'
+
+services:
+   db:
+      image: kartoza/postgis:${POSTGIS_VERSION_TAG}
+      container_name: postgis_gis_course
+      volumes:
+        - ./geo-db-data:/var/lib/postgresql
+      ports:
+        - ${POSTGRES_PORT}:5432
+      environment:
+        - POSTGRES_DB=${POSTGRES_DB}
+        - POSTGRES_USER=${POSTGRES_USER}
+        - POSTGRES_PASS=${POSTGRES_PASS}
+        - ALLOW_IP_RANGE=${ALLOW_IP_RANGE}
+        - FORCE_SSL=TRUE
+      restart: on-failure
+      healthcheck:
+        test: "PGPASSWORD=${POSTGRES_PASS} pg_isready -h 127.0.0.1 -U ${POSTGRES_USER} -d ${POSTGRES_DB}"
+
+   geoserver:
+      image: kartoza/geoserver:${GS_VERSION}
+      container_name: geoserver_gis_course
+      volumes:
+        - ./geoserver-data:/opt/geoserver/data_dir
+      ports:
+        - ${GEOSERVER_PORT}:8080
+      restart: on-failure
+      environment:
+        - GEOSERVER_DATA_DIR=${GEOSERVER_DATA_DIR}
+        - GEOWEBCACHE_CACHE_DIR=${GEOWEBCACHE_CACHE_DIR}
+        - GEOSERVER_ADMIN_PASSWORD=${GEOSERVER_ADMIN_PASSWORD}
+        - GEOSERVER_ADMIN_USER=${GEOSERVER_ADMIN_USER}
+        - INITIAL_MEMORY=${INITIAL_MEMORY}
+        - MAXIMUM_MEMORY=${MAXIMUM_MEMORY}
+        - STABLE_EXTENSIONS=${STABLE_EXTENSIONS}
+        - COMMUNITY_EXTENSIONS=${COMMUNITY_EXTENSIONS}
+        - GEOSERVER_CONTEXT_ROOT=${GEOSERVER_CONTEXT_ROOT}
+      depends_on:
+        db:
+          condition: service_healthy
+      healthcheck:
+        test: "curl --fail --silent --write-out 'HTTP CODE : %{http_code}\n' --output /dev/null -u ${GEOSERVER_ADMIN_USER}:'${GEOSERVER_ADMIN_PASSWORD}' http://localhost:8080/geoserver/rest/about/version.xml"
+        interval: 1m30s
+        timeout: 10s
+        retries: 3
+```
+
+Al solito poi avviamo i container con:
+
+```
+docker-compose up -d
+```
+
 ___
 
 #  Geoserver REST API 
