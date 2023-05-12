@@ -346,10 +346,7 @@ localhost:8600/geoserver/rest/workspaces/test/layers/popolazione_italia?recurse=
 
 ##  Python HTTP script REST API automatization
 
-[Opzionale] magari qui invece facco solo vedere un esempio di applicaizone python per fare requests
-e spiego possibili script implementabili ... invece di implementarlo che siamo già sui 20 minuti belli pieni.
-
-Configurare geoserver tramite yaml file e chiamate http con python
+[Opzionale] 
 
 1 - creare un virtual environment e attivarlo, quindi installare i relativi requirements
 
