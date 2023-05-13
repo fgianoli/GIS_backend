@@ -248,7 +248,7 @@ vanno sostituiti con tag
 
 Url PUT request
 ```
-localhost:8600/geoserver/rest/styles/pop_ita.xml
+localhost:8600/geoserver/rest/styles/popolazione_italia.xml
 ```
 
 Body (XML)
@@ -389,4 +389,43 @@ private_url_response = requests.get(
 # Print dello status code della risposta
 private_url_response.status_code
 
+```
+
+Di seguito un esempio di creazione di workspace tramite python code:
+
+```
+import requests
+from requests.auth import HTTPBasicAuth
+
+url = "http://localhost:8600/geoserver/rest/workspaces"
+payload = ""
+
+admin = "admin"
+psw = 'myawesomegeoserver'
+
+# Basic Authentication eg. lista workspaces
+private_url_response = requests.get(
+    url=url,
+    auth=HTTPBasicAuth(admin, psw)
+)
+
+# Print dello status code della risposta
+print(F"Status code: {private_url_response.status_code}")
+
+# Print della risposta
+print(F"Content:\n{private_url_response.content}")
+
+# Basic Authentication eg. creare un workspace
+payload = {"workspace":{"name":"test_python"}}
+private_url_response = requests.post(
+    url=url,
+    auth=HTTPBasicAuth(admin, psw),
+    json = payload
+)
+
+# Print dello status code della risposta
+print(F"Status code: {private_url_response.status_code}")
+
+# Print della risposta
+print(F"Content:\n{private_url_response.content}")
 ```
