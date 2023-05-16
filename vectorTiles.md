@@ -1,7 +1,7 @@
 
 #  Vector Tiles
 
-[DOC] https://www.maptiler.com/news/2019/02/what-are-vector-tiles-and-why-you-should-care/
+[DOC] https://maptiler.it/news/2019/02/what-are-vector-tiles-and-why-you-should-care/
 
 Cosa sono e a cosa servono.
 
@@ -84,11 +84,12 @@ Per visualizzare il risultato vedremo poi come inserire queste Vector Tiles in u
 
 [opzionale]
 Velocizzare il serving delle Vecotr Tiles con un layer di caching eg. Redis
-Usare flask o fastapi per documentare e standardizzare le api di pubblicaizone delel vector tiles.
+Usare flask o fastapi per documentare e standardizzare le api di pubblicaizone delle vector tiles.
 
 ##  Geoserver Vector Tiles
 
 Pubblicare Vector Tiles con geoserver
+[DOC] https://docs.geoserver.org/2.23.x/en/user/extensions/vectortiles/index.html
 [DOC] https://docs.geoserver.org/latest/en/user/extensions/vectortiles/tutorial.html
 
 L'immagine di kartoza che usiamo per il corso include già l'estensione per la distribuzioe del servizio con tile caching in formato vector tiles, vediamo ora come abilitare tale serviizo per singolo layer o di default nel pubblicare nuovi layers.
@@ -121,6 +122,8 @@ selezionado questi si aprirà un renderer mappa con la preview del layer formato
 Ora che abbiamo sia Geoserver che il minimal web server in grado di distribuire Vector Tiles proviamo quindi a visualizzarne le geometrie.
 
 Nel repository del tutorial del minimal web server troveremo già una demo Mapbox in cui i basterà modificare nel file index.html il centro della mappa per poter visualizzare e testare il nostro layer popolazione_italia.
+
+[DOC] https://docs.mapbox.com/mapbox-gl-js/api/
 
 ```
 var map = new mapboxgl.Map({
