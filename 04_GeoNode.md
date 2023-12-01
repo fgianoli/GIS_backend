@@ -34,7 +34,7 @@ docker compose version
 ```sh
 cd /opt
 ## Controllare la release di GeoNode
-git clone https://github.com/GeoNode/geonode-project.git -b 4.0.x
+git clone https://github.com/GeoNode/geonode-project.git -b 4.1.x
 source /usr/share/virtualenvwrapper/virtualenvwrapper.sh
 mkvirtualenv --python=/usr/bin/python3 my_geonode
 pip install Django==3.2.13
